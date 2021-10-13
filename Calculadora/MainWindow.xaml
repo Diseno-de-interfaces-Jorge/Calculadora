@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculadora"
         mc:Ignorable="d"
-        Title="Calculadora" Height="450" Width="800"
+        Title="Calculadora" Height="450" Width="800" MinWidth="200" MinHeight="350"
         Icon="Assets\calcLogo.ico">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,18 +14,26 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="55"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
-        
-        <Viewbox Margin="5" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="3" >
-            <TextBox x:Name="ResultTextBox"></TextBox>
+
+        <Border Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="3"
+                BorderBrush="Black"
+                BorderThickness="1"
+                Margin="5">
+        <Viewbox HorizontalAlignment="Right" >
+            <TextBox x:Name="ResultTextBox" HorizontalAlignment="Right"></TextBox>
         </Viewbox>
+            
+        </Border>
+
         <Button Margin="5" Grid.Row="2" Grid.Column="0" FontWeight="Bold" FontSize="36" Tag="1" Click="Button_Click">1</Button>
         <Button Margin="5" Grid.Row="2" Grid.Column="1" FontWeight="Bold" FontSize="36" Tag="2" Click="Button_Click">2</Button>
         <Button Margin="5" Grid.Row="2" Grid.Column="2" FontWeight="Bold" FontSize="36" Tag="3" Click="Button_Click">3</Button>
